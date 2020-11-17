@@ -49,9 +49,6 @@
     if ([[NSBundle mainBundle] objectForInfoDictionaryKey:@"NSLocationAlwaysAndWhenInUseUsageDescription"] != nil) {
        [self.locationManager requestAlwaysAuthorization];
     }
-    else if ([[NSBundle mainBundle] objectForInfoDictionaryKey:@"NSLocationWhenInUseUsageDescription"] != nil) {
-        [self.locationManager requestWhenInUseAuthorization];
-    }
     else if ([[NSBundle mainBundle] objectForInfoDictionaryKey:@"NSLocationAlwaysUsageDescription"] != nil) {
         [self.locationManager requestAlwaysAuthorization];
     }
