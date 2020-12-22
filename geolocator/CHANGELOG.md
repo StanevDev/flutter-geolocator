@@ -1,3 +1,31 @@
+## 6.1.13
+
+- Resolve deprecation warnings when building for Android.
+
+## 6.1.12
+
+- Added an example on how to access the current position of the device to the README.md (see issue [#615](https://github.com/Baseflow/flutter-geolocator/issues/615)).
+
+## 6.1.11
+
+- Solve issue on Android which can throw a `ConcurrentModificationException` when accessing locations simultaneously (see issue [#620](https://github.com/Baseflow/flutter-geolocator/issues/620)).
+
+## 6.1.10
+
+- Filter false positive notifications on Android indicating location services are not available (see issue [#585](https://github.com/Baseflow/flutter-geolocator/issues/585)).
+
+## 6.1.9
+
+- Return `LocationPermission.always` when requesting permission on Android 5.1 and below (see issue [#610](https://github.com/Baseflow/flutter-geolocator/issues/610)).
+
+## 6.1.8+1
+
+- Fixed Dart formatting issue.
+
+## 6.1.8
+
+- Deprecate the `timeInterval` parameter of the `getPositionStream` method in favor of the more semantic `intervalDuration` parameter.
+
 ## 6.1.7
 
 - Resolved bug on Android where in some situations an IllegalArgumentException occures (see issue [#590](https://github.com/Baseflow/flutter-geolocator/issues/590)).

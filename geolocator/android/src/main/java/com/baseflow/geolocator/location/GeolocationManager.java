@@ -13,18 +13,20 @@ import com.baseflow.geolocator.permission.LocationPermission;
 import com.baseflow.geolocator.permission.PermissionManager;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
-;
-import io.flutter.plugin.common.PluginRegistry.ActivityResultListener;
-import java.util.ArrayList;
-import java.util.List;
 
-public class GeolocationManager implements ActivityResultListener {
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
+
+@SuppressWarnings("deprecation")
+public class GeolocationManager
+    implements io.flutter.plugin.common.PluginRegistry.ActivityResultListener {
+
   @NonNull private final PermissionManager permissionManager;
   private final List<LocationClient> locationClients;
 
   public GeolocationManager(@NonNull PermissionManager permissionManager) {
     this.permissionManager = permissionManager;
-    this.locationClients = new ArrayList<>();
+    this.locationClients = new CopyOnWriteArrayList<>();
   }
 
   public void getLastKnownPosition(
